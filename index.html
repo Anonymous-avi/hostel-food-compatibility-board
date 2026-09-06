@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page settings -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
+  <title>Hostel Food Compatibility Board</title>
+
+  <!-- Connect our CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== MAIN PAGE ===== -->
+  <main class="container">
+
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-header">
+      <h1>Hostel Food Compatibility Board</h1>
+      <p>Find dishes that everyone in your group can eat.</p>
+    </header>
+
+    <!-- ===== GROUP DETAILS SECTION ===== -->
+    <section class="card">
+      <h2>Group Details</h2>
+
+      <!-- Budget will be connected to JavaScript later -->
+      <label for="budget">Budget per person (₹)</label>
+      <input
+        type="number"
+        id="budget"
+        value="150"
+        min="1"
+      />
+
+      <!-- Residents table will be filled with built-in data later -->
+      <h3>Residents</h3>
+      <table id="residentTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Diet</th>
+            <th>Allergens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JavaScript will add resident rows here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== DISHES SECTION ===== -->
+    <section class="card">
+      <h2>Available Dishes</h2>
+
+      <!-- JavaScript will add dish rows here -->
+      <table id="dishTable">
+        <thead>
+          <tr>
+            <th>Dish ID</th>
+            <th>Cafe</th>
+            <th>Dish</th>
+            <th>Diet</th>
+            <th>Ingredients</th>
+            <th>Price (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dish rows will appear here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== ACTIONS SECTION ===== -->
+    <section class="card">
+      <h2>Check Compatibility</h2>
+
+      <div class="actions">
+        <button id="checkButton">Check Compatibility</button>
+        <button id="resetButton">Reset</button>
+      </div>
+
+      <!-- Search applies only to compatible dishes -->
+      <label for="searchInput">Search compatible dishes</label>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by cafe, dish, or ingredient..."
+      />
+    </section>
+
+    <!-- ===== RESULT SECTION ===== -->
+    <section class="card">
+      <h2>Results</h2>
+
+      <!-- Compatible count will be updated by JavaScript -->
+      <p id="compatibleCount">Compatible dishes: 0</p>
+
+      <!-- Errors will appear here -->
+      <div id="errorArea"></div>
+
+      <!-- Compatible and excluded dishes will appear here -->
+      <div id="resultArea">
+        <p>No results yet. Click "Check Compatibility".</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== JAVASCRIPT FILES ===== -->
+  <!-- We will connect these files after the HTML is ready -->
+  <script src="data.js"></script>
+  <script src="validation.js"></script>
+  <script src="logic.js"></script>
+  <script src="tables/residentTable.js"></script>
+  <script src="tables/dishTable.js"></script>
+  <script src="app.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>

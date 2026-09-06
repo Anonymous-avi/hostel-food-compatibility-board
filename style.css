@@ -1,0 +1,161 @@
+
+/* ===== 1. BASIC PAGE STYLING ===== */
+
+/* Remove default spacing and set a clean font */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f6;
+  color: #24332d;
+}
+
+
+/* ===== 2. MAIN PAGE CONTAINER ===== */
+
+/* Keep the content centered and readable */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+
+/* ===== 3. PAGE HEADER ===== */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin-bottom: 10px;
+  color: #1f6f50;
+}
+
+.page-header p {
+  color: #5d6b64;
+}
+
+
+/* ===== 4. CARD SECTIONS ===== */
+
+/* Each section gets its own white card */
+.card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #dce7e1;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #1f6f50;
+}
+
+.card h3 {
+  margin-top: 25px;
+}
+
+
+/* ===== 5. INPUTS ===== */
+
+/* Make budget and search inputs easy to use */
+input {
+  padding: 10px;
+  border: 1px solid #b8c9bf;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: 2px solid #8bc9a9;
+}
+
+
+/* ===== 6. TABLES ===== */
+
+/* Allow wide tables to scroll on small screens */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5eee9;
+}
+
+th {
+  background: #e8f3ed;
+  color: #1f6f50;
+}
+
+
+/* ===== 7. BUTTONS ===== */
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #1f6f50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #18563e;
+}
+
+
+/* ===== 8. RESULT AREA ===== */
+
+#compatibleCount {
+  font-weight: bold;
+  color: #1f6f50;
+}
+
+#errorArea {
+  color: #b42318;
+  margin-bottom: 15px;
+}
+
+
+/* ===== 9. MOBILE RESPONSIVENESS ===== */
+
+/* Make the page comfortable on smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+}
