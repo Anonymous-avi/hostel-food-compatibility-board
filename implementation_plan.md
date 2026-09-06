@@ -159,13 +159,3 @@ Expected result:
 - Identify the D01 row and price field.
 - Clear all previous results and counts.
 
-### Test 5: Reset
-
-Click Reset after the invalid-price test.
-
-Expected result:
-
-- Original residents and dishes return.
-- Budget returns to ₹150.
-- Search becomes empty.
-- Old errors and results are cleared.

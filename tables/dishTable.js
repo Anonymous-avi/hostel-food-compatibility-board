@@ -20,7 +20,7 @@ function renderDishes() {
       <td>${dish.ingredients.join(", ")}</td>
       <td>₹${dish.price}</td>
     `;
-
+    //now the rows created will be added to the table body
     tableBody.appendChild(row);
   });
 }

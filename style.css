@@ -9,7 +9,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f7f6;
+  background: #fad4e7;
   color: #24332d;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .page-header p {
-  color: #5d6b64;
+  color: #202522;
 }
 
 
@@ -48,8 +48,8 @@ body {
   background: white;
   padding: 24px;
   margin-bottom: 20px;
-  border-radius: 12px;
-  border: 1px solid #dce7e1;
+  border-radius: 30px;
+  border: 1px solid #0f0f0f;
 }
 
 .card h2 {
@@ -67,7 +67,7 @@ body {
 /* Make budget and search inputs easy to use */
 input {
   padding: 10px;
-  border: 1px solid #b8c9bf;
+  border: 1px solid #2f3331;
   border-radius: 6px;
   font-size: 14px;
 }
@@ -90,7 +90,7 @@ th,
 td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #e5eee9;
+  border-bottom: 1px solid #c1cdc5;
 }
 
 th {

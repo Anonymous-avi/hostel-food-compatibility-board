@@ -2,7 +2,7 @@
 // ===== RESIDENT TABLE =====
 // This function displays all residents in the HTML table.
 
-function renderResidents() {
+function renderResidents() { //used to show resident's table data inside HTML table
   const tableBody = document.querySelector("#residentTable tbody");
 
   // Remove old rows before adding fresh data.

@@ -1,7 +1,7 @@
 // ===== NORMALIZATION =====
 
-// Extra spaces remove karta hai
-// aur text ko uppercase mein convert karta hai.
+// It removes extra spaces 
+// And converts the text to upper case 
 
 function normalizeTag(value) {
   return value.trim().toUpperCase();
@@ -69,8 +69,8 @@ function isAllergenSafe(residentAllergens, dishIngredients) {
 
 // ===== BUDGET CHECK =====
 
-// Check karta hai ki dish ka price
-// resident ke budget ke andar hai ya nahi.
+// it checks whether the dish's price exceeds the budget or not 
+
 
 function isWithinBudget(dishPrice, budget) {
   return dishPrice <= budget;
@@ -102,7 +102,7 @@ function isDishCompatible(resident, dish, budget) {
 }
 
 
-// ===== SINGLE DISH CHECK =====
+//group check compatibility
 
 function checkDishCompatibility(dish, residents, budget) {
   const reasons = [];
