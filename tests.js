@@ -153,35 +153,54 @@ console.assert(
 
 // ===== TEST 13: COMPATIBLE DISH =====
 
+const compatibleResult = checkDishCompatibility(
+  dishes[0],
+  residents,
+  150
+);
+
 console.assert(
-  isDishCompatible(residents[0], dishes[0], 150) === true,
-  "Test failed: Asha should be compatible with Lentil Rice Bowl"
+  compatibleResult.compatible === true,
+  "Test failed: Lentil Rice Bowl should be compatible for the group"
 );
 
 
 // ===== TEST 14: ALLERGEN MAKES DISH UNSAFE =====
 
+const allergenResult = checkDishCompatibility(
+  dishes[3],
+  residents,
+  150
+);
+
 console.assert(
-  isDishCompatible(residents[1], dishes[3], 150) === false,
-  "Test failed: Dev should not eat Peanut Noodles"
+  allergenResult.compatible === false,
+  "Test failed: Peanut Noodles should be excluded"
+);
+
+console.assert(
+  allergenResult.reasons.includes("ALLERGEN:Dev:PEANUT"),
+  "Test failed: peanut allergen reason should be present"
 );
 
 
 // ===== TEST 15: BUDGET MAKES DISH INCOMPATIBLE =====
 
+const budgetResult = checkDishCompatibility(
+  dishes[0],
+  residents,
+  100
+);
+
 console.assert(
-  isDishCompatible(residents[0], dishes[0], 100) === false,
+  budgetResult.compatible === false,
   "Test failed: Lentil Rice Bowl should exceed budget of 100"
 );
 
-
-// ===== TEST 16: NO RESTRICTION RESIDENT =====
-
 console.assert(
-  isDishCompatible(residents[2], dishes[4], 150) === true,
-  "Test failed: Mira should be compatible with Egg Sandwich"
+  budgetResult.reasons.includes("OVER_BUDGET"),
+  "Test failed: OVER_BUDGET reason should be present"
 );
-
 
 // ===== COMPATIBILITY TESTS COMPLETE =====
 

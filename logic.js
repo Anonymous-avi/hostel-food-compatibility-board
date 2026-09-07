@@ -76,32 +76,6 @@ function isWithinBudget(dishPrice, budget) {
   return dishPrice <= budget;
 }
 
-// ===== SIMPLE SINGLE DISH CHECK =====
-
-// Ek resident aur ek dish ke liye
-// diet, allergen aur budget ke teeno rules check karta hai.
-
-function isDishCompatible(resident, dish, budget) {
-  // Diet rule check karo
-  if (!isDietCompatible(resident.diet, dish.diet)) {
-    return false;
-  }
-
-  // Allergen rule check karo
-  if (!isAllergenSafe(resident.allergens, dish.ingredients)) {
-    return false;
-  }
-
-  // Budget rule check karo
-  if (!isWithinBudget(dish.price, budget)) {
-    return false;
-  }
-
-  // Agar teeno rules pass ho gaye
-  return true;
-}
-
-
 //group check compatibility
 
 function checkDishCompatibility(dish, residents, budget) {
